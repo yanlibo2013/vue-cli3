@@ -14,7 +14,8 @@ module.exports = {
       entry: {
         vendorvue: ["vue"],
         vendorvueroute: ["vue-route"],
-        vendorelement: ["element-ui"]
+        vendorelement: ["element-ui"],
+        vendorlodash: ["lodash"]
       },
       // 输出目录
       output: path.join(__dirname, "./public/dll"),
@@ -40,14 +41,14 @@ module.exports = {
   devServer: {
     proxy: {
       "/mock/": {
-        target: `http://${HOST ? HOST : "localhost"}:7000`,
+        target: `http://${HOST ? HOST : "localhost"}:${PORT ? PORT : "7000"}`,
         changeOrigin: false,
         pathRewrite: {
           "^/mock": ""
         }
       },
       "/api/": {
-        target: `http://${HOST ? HOST : "localhost"}:7000`,
+        target: `http://${HOST ? HOST : "localhost"}:${PORT ? PORT : "7000"}`,
         changeOrigin: false,
         pathRewrite: {
           "^/api": ""
