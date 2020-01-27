@@ -42,8 +42,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/)
 - [√ 配置多环境变量]
 - [√ 配置 proxy 跨域]
 - [√ 支持 seo]
-- [√ 去掉 console.log]
-- [√ 添加 IE 兼容]
 - [√ 配置多项目模式]
 - [√ webpack 启动之后自动打开首页]
 - [√ webpack 构建完成之后服务器自动部署]

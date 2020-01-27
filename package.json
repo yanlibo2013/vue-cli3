@@ -9,15 +9,25 @@
     "dll": "vue-cli-service dll",
     "serve:vpn": "vue-cli-service serve --host 192.168.31.74 --open",
     "nodemon-server-routes": "nodemon --watch mock --exec json-server --routes ./server/db/routes.json ./server/db/db.json --port 7000",
-    "nodemon-server-routes:vpn": "nodemon --watch mock --exec json-server --routes ./server/db/routes.json ./server/db/db.json --port 7000 --host 192.168.31.74"
+    "nodemon-server-routes:vpn": "nodemon --watch mock --exec json-server --routes ./server/db/routes.json ./server/db/db.json --port 7000 --host 192.168.31.74",
+    "deploy:dev": "npm run build && cross-env NODE_ENV=development node ./deploy",
+    "deploy:prod": "npm run build && cross-env NODE_ENV=production node ./deploy"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.4.4",
     "element-ui": "^2.13.0",
+    "jsplumb": "^2.12.8",
     "loadsh": "0.0.4",
+    "moment": "^2.24.0",
     "nodemon": "^2.0.2",
     "vue": "^2.6.10",
-    "vue-route": "^1.5.1"
+    "vue-count-to": "^1.0.13",
+    "vue-drag-drop": "^1.1.4",
+    "vue-i18n": "^8.15.3",
+    "vue-meta": "^2.3.2",
+    "vue-route": "^1.5.1",
+    "vuex-persistedstate": "^2.7.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
