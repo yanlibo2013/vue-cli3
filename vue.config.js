@@ -1,4 +1,7 @@
 const path = require("path");
+// console.log(" process.env.npm_config_host", process.env.npm_config_host);
+const HOST = process.env.npm_config_host;
+const PORT = process.env.npm_config_port && Number(process.env.npm_config_port);
 module.exports = {
   // Other options...
 
@@ -32,5 +35,24 @@ module.exports = {
   //diaable eslint
   chainWebpack: config => {
     config.module.rules.delete("eslint");
+  },
+
+  devServer: {
+    proxy: {
+      "/mock/": {
+        target: `http://${HOST ? HOST : "localhost"}:7000`,
+        changeOrigin: false,
+        pathRewrite: {
+          "^/mock": ""
+        }
+      },
+      "/api/": {
+        target: `http://${HOST ? HOST : "localhost"}:7000`,
+        changeOrigin: false,
+        pathRewrite: {
+          "^/api": ""
+        }
+      }
+    }
   }
 };

@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dll": "vue-cli-service dll",
-    "serve:vpn": "vue-cli-service serve --host 192.168.31.74"
+    "serve:vpn": "vue-cli-service serve --host 192.168.31.74 --open",
+    "nodemon-server-routes": "nodemon --watch mock --exec json-server --routes ./server/db/routes.json ./server/db/db.json --port 7000",
+    "nodemon-server-routes:vpn": "nodemon --watch mock --exec json-server --routes ./server/db/routes.json ./server/db/db.json --port 7000 --host 192.168.31.74"
   },
   "dependencies": {
     "core-js": "^3.4.4",
     "element-ui": "^2.13.0",
+    "loadsh": "0.0.4",
+    "nodemon": "^2.0.2",
     "vue": "^2.6.10",
     "vue-route": "^1.5.1"
   },
