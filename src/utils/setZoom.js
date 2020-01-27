@@ -15,4 +15,4 @@ export default function setZoom (zoom, instance, transformOrigin, el) {
   el.style["transformOrigin"] = oString;
 
   instance.setZoom(zoom);
-};
+}

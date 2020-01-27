@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "npm run serve",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dll": "vue-cli-service dll",
-    "serve:vpn": "vue-cli-service serve --host 192.168.31.74 --open",
     "nodemon-server-routes": "nodemon --watch mock --exec json-server --routes ./server/db/routes.json ./server/db/db.json --port 7000",
     "nodemon-server-routes:vpn": "nodemon --watch mock --exec json-server --routes ./server/db/routes.json ./server/db/db.json --port 7000 --host 192.168.31.74",
     "deploy:dev": "npm run build && cross-env NODE_ENV=development node ./deploy",
@@ -33,6 +33,7 @@
     "vue-i18n": "^8.15.3",
     "vue-meta": "^2.3.2",
     "vue-route": "^1.5.1",
+    "vue-router": "^3.0.7",
     "vuex": "^3.1.2",
     "vuex-persistedstate": "^2.7.0"
   },
@@ -43,6 +44,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "sass-loader": "^8.0.2",
     "vue-cli-plugin-dll": "^1.1.11",
     "vue-template-compiler": "^2.6.10"
   },

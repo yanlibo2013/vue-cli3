@@ -22,11 +22,7 @@
             title="导入表格内字段"
             class="ns_fields3 icon iconfont icon-ir-copy"
           ></i>
-          <i
-            @click="addInputLeft"
-            title="新增已选字段"
-            class="ns_fields1 el-icon-plus"
-          ></i>
+          <i @click="addInputLeft" title="新增已选字段" class="ns_fields1 el-icon-plus"></i>
         </div>
         <div>
           <el-table
@@ -42,12 +38,7 @@
             height="25vh"
             style="width: 100%;"
           >
-            <el-table-column
-              fixed
-              :index="inputLeftIndexMethod"
-              type="index"
-              width="60"
-            ></el-table-column>
+            <el-table-column fixed :index="inputLeftIndexMethod" type="index" width="60"></el-table-column>
             <el-table-column prop="name" label="字段名"></el-table-column>
             <el-table-column type="selection" width="55"></el-table-column>
           </el-table>
@@ -79,11 +70,7 @@
             placeholder="请输入字段名称"
             prefix-icon="el-icon-search"
           ></el-input>
-          <span
-            @click="removeOutSelAllField"
-            class="removeAllFields"
-            title="删除全部已选字段"
-          >
+          <span @click="removeOutSelAllField" class="removeAllFields" title="删除全部已选字段">
             <i class="fa fa-trash-o"></i>
           </span>
           <!-- <span class="removeAllFields pr20" title="删除已选的非法字段">
@@ -107,17 +94,12 @@
               height="25vh"
               style="width: 100%;"
             >
-              <el-table-column
-                fixed
-                :index="inputRightIndexMethod"
-                type="index"
-                width="60"
-              ></el-table-column>
+              <el-table-column fixed :index="inputRightIndexMethod" type="index" width="60"></el-table-column>
               <el-table-column prop="name" label="字段名">
                 <template slot-scope="scope">
-                  <span :class="scope.row.isillegality ? 'righttb' : ''"
-                    >{{ scope.row.name }} {{ scope.row.isillegality }}</span
-                  >
+                  <span
+                    :class="scope.row.isillegality ? 'righttb' : ''"
+                  >{{ scope.row.name }} {{ scope.row.isillegality }}</span>
                 </template>
               </el-table-column>
               <el-table-column prop="alias" label="别名">
@@ -159,12 +141,11 @@
       <p v-if="Missing.length != 0">缺失 {{ Missing.length }}个</p>
       <p v-if="Missing.length != 0" class="Missing">{{ Missing.toString() }}</p>
       <p v-if="illegality.length != 0">非法 {{ illegality.length }}个</p>
-      <p v-if="illegality.length != 0" class="illegality">
-        {{ illegality.toString() }}
-      </p>
+      <p v-if="illegality.length != 0" class="illegality">{{ illegality.toString() }}</p>
     </div>
   </div>
 </template>
+
 <script>
 // import { mapGetters, mapActions, mapState } from "vuex";
 // import _ from "lodash";
@@ -292,9 +273,14 @@ export default {
       _.forEach(dataright, p => {
         _.forEach(illegality, s => {
           if (p.name == s) {
-            result.push({ ...p, isillegality: true });
+            result.push({
+              ...p,
+              isillegality: true
+            });
           } else {
-            result.push({ ...p });
+            result.push({
+              ...p
+            });
           }
         });
       });
@@ -460,12 +446,14 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped="">
+
+<style lang="scss" scoped>
 .block__list_tags:after {
   clear: both;
   content: "";
   display: block;
 }
+
 .nodeTable {
   .block__list {
     box-sizing: border-box;
@@ -478,9 +466,11 @@ export default {
     color: #31708f;
     background: #dae6ec;
   }
+
   .block__list_words {
     height: 35vh;
   }
+
   .block__list_words li {
     padding: 10px;
   }
@@ -489,6 +479,7 @@ export default {
     opacity: 0.4;
     background-color: #f4e2c9;
   }
+
   .block__list_tags li {
     color: #fff;
     float: left;
@@ -498,6 +489,7 @@ export default {
     background-color: #5f9edf;
     text-align: center;
   }
+
   .blockLeft {
     width: 39%;
     float: left;
@@ -512,6 +504,7 @@ export default {
     float: left;
     margin-left: 1%;
   }
+
   .ns_fields1,
   .ns_fields2 {
     float: right;
@@ -522,15 +515,18 @@ export default {
     font-weight: bold;
     cursor: pointer;
   }
+
   .ns_fields1:hover,
   .ns_fields2:hover,
   .ns_fields3:hover {
     color: #ff4e4e;
   }
+
   .removeAllFields {
     float: right;
     margin: 8px 10px 0px 0px;
   }
+
   .removeAllFields:hover {
     color: #ff4949;
     cursor: pointer;

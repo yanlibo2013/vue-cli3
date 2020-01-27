@@ -1,6 +1,7 @@
 const path = require("path");
 // console.log(" process.env.npm_config_host", process.env.npm_config_host);
 const HOST = process.env.npm_config_host;
+console.log("HOST", HOST);
 const PORT = process.env.npm_config_port && Number(process.env.npm_config_port);
 module.exports = {
   // Other options...
@@ -56,6 +57,12 @@ module.exports = {
           "^/api": ""
         }
       }
-    }
-  }
+    },
+    overlay: {
+      warnings: false,
+      errors: false
+    },
+    lintOnSave: false
+  },
+  runtimeCompiler: true
 };

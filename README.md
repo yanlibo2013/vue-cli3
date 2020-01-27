@@ -53,3 +53,5 @@ baseproject 默认值 "project1" 项目名称 (此处值对应 view/login/文件
 
 示例
 npm run dev --baseurl=http://localhost.dev:9000/ --baseenv=api --baseproject=project2
+
+npm run dev --host=192.168.31.74

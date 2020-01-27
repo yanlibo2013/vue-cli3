@@ -1,14 +1,16 @@
-// import axios from "axios";
+import axios from "axios";
 
 // import store from '@/store'
 import { getBaseURL } from "@/utils/util";
 
-let baseURL = process.env.BASE_URL ? process.env.BASE_URL : getBaseURL();
-let baseENV = process.env.BASE_ENV;
+let baseURL = process.env.npm_config_baseurl
+  ? JSON.stringify(process.env.npm_config_baseurl)
+  : getBaseURL();
+let baseENV = JSON.stringify(process.env.npm_config_baseenv) || "mock";
 baseURL += baseENV;
 
-// console.log("baseURL", baseURL);
-// console.log("baseENV", baseENV);
+console.log("baseURL", baseURL);
+console.log("baseENV", baseENV);
 
 // create an axios instance
 const service = axios.create({
