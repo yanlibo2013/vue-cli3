@@ -1,1 +1,1 @@
-{"name":"vendorvue_library","content":{"./node_modules/vue/dist/vue.runtime.esm.js":{"id":2,"buildMeta":{"exportsType":"namespace","providedExports":["default"]}},"./node_modules/webpack/buildin/global.js":{"id":20,"buildMeta":{"providedExports":true}}}}
+{"name":"vendorvue_library","content":{"./node_modules/vue/dist/vue.runtime.esm.js":{"id":2,"buildMeta":{"exportsType":"namespace","providedExports":["default"]}},"./node_modules/webpack/buildin/global.js":{"id":11,"buildMeta":{"providedExports":true}}}}

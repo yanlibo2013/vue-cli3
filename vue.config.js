@@ -30,7 +30,9 @@ module.exports = {
 
       // 自动注入到 index.html
       // 在执行 `dev` , `build` 等其他指令时，程序会自动将 `dll` 指令生成的 `*.dll.js` 等文件自动注入到 index.html 中。
-      inject: true
+      inject: true,
+      // !! Recommended configuration
+      cacheFilePath: path.resolve(__dirname, "./public")
     }
   },
   //diaable eslint
