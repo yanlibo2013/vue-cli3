@@ -20,12 +20,7 @@
             }"
             v-if="item.isshow"
           >
-            <el-tooltip
-              lass="item"
-              effect="dark"
-              :content="item.name"
-              placement="top"
-            >
+            <el-tooltip lass="item" effect="dark" :content="item.name" placement="top">
               <i class="parIcon el-icon-warning"></i>
             </el-tooltip>
             <!-- 计数器 -->
@@ -110,7 +105,7 @@ export default {
     };
   },
   computed: {
-    ...Vuex.mapState(["realtime"])
+    // ...Vuex.mapState(["realtime"])
   },
   mounted() {},
   beforeCreate() {},
@@ -121,7 +116,7 @@ export default {
   beforeDestroy() {},
   destroyed: function() {},
   methods: {
-    ...Vuex.mapActions(["setParamertData"]),
+    // ...Vuex.mapActions(["setParamertData"]),
     changeFormItem(item, val) {
       this.$store.dispatch(
         "realtime/setDataSetSelect",

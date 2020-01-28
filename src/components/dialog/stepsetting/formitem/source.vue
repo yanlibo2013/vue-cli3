@@ -122,7 +122,7 @@ export default {
   },
 
   computed: {
-    ...Vuex.mapState(["realtime"])
+    ...mapState({ realtime: "realtime" })
   },
   props: {
     data: {

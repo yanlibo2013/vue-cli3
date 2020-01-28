@@ -14,12 +14,7 @@
         }"
         v-if="item.isshow"
       >
-        <el-tooltip
-          lass="item"
-          effect="dark"
-          :content="item.name"
-          placement="top"
-        >
+        <el-tooltip lass="item" effect="dark" :content="item.name" placement="top">
           <i class="parIcon el-icon-warning"></i>
         </el-tooltip>
         <el-input
@@ -38,15 +33,10 @@
             :value="subitem"
           ></el-option>
         </el-select>
-        <el-switch
-          v-if="item.type == 'boolean'"
-          v-model="form[item.name]"
-        ></el-switch>
+        <el-switch v-if="item.type == 'boolean'" v-model="form[item.name]"></el-switch>
       </el-form-item>
     </el-form>
-    <adItem
-      :data="{ adformItemList: adformItemList, adformItemData: adformItemData }"
-    ></adItem>
+    <adItem :data="{ adformItemList: adformItemList, adformItemData: adformItemData }"></adItem>
   </div>
 </template>
 
@@ -77,7 +67,7 @@ export default {
     }
   },
   computed: {
-    ...Vuex.mapState(["realtime"])
+    // ...Vuex.mapState(["realtime"])
   },
   props: {
     data: {
@@ -115,12 +105,12 @@ export default {
   beforeDestroy() {},
   destroyed() {},
   methods: {
-    ...Vuex.mapActions([
-      "openDialog",
-      "setParamertData",
-      "initOutInputData",
-      "modifyLoadingStatus"
-    ]),
+    // ...Vuex.mapActions([
+    //   "openDialog",
+    //   "setParamertData",
+    //   "initOutInputData",
+    //   "modifyLoadingStatus"
+    // ]),
     getFormItemData(formItem, data) {
       let result = {};
       _.forEach(formItem, item => {

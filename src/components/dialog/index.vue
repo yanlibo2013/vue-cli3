@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions, mapState } from "vuex";
 import { getSteoConfigData } from "@/api/flow";
 import input from "./input/input";
 import parameter from "./stepsetting/index";
@@ -118,7 +119,7 @@ export default {
     };
   },
   computed: {
-    ...Vuex.mapState(["realtime"])
+    // ...Vuex.mapState(["realtime"])
   },
   mounted() {},
   beforeCreate() {},
@@ -129,21 +130,21 @@ export default {
   beforeDestroy() {},
   destroyed: function() {},
   methods: {
-    ...Vuex.mapActions([
-      "getStepConfiug",
-      "openDialog",
-      "setDataSetSelect",
-      "setParamertData",
-      "realtime.initParametData",
-      "initOutCheckedData",
-      "initInputCheckedData",
-      "initInputData",
-      "initOutInputData",
-      "modifyLoadingStatus",
-      "setFormItemList",
-      "setAdList",
-      "getSplitEndpoint"
-    ]),
+    // ...Vuex.mapActions([
+    //   "getStepConfiug",
+    //   "openDialog",
+    //   "setDataSetSelect",
+    //   "setParamertData",
+    //   "realtime.initParametData",
+    //   "initOutCheckedData",
+    //   "initInputCheckedData",
+    //   "initInputData",
+    //   "initOutInputData",
+    //   "modifyLoadingStatus",
+    //   "setFormItemList",
+    //   "setAdList",
+    //   "getSplitEndpoint"
+    // ]),
     modifyLodadingStatus() {
       this.loading = false;
     },

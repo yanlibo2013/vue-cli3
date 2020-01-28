@@ -225,7 +225,7 @@
       "flowName": "更多法规规定",
       "links": [
         {
-          "name": "con_60",
+          "name": "con_9",
           "source": "source_1",
           "sourceOutput": "output",
           "target": "sink_4",
@@ -285,7 +285,7 @@
           }
         }
       ],
-      "date": "2020-01-26 21:41:21",
+      "date": "2020-01-28 14:26:03",
       "id": 2
     },
     {
@@ -341,6 +341,40 @@
       "date": "2020-01-27 09:02:38",
       "matrix": "{\"x\":-548.4873721368342,\"y\":44.700098709962276,\"scale\":0.8808143101626428}",
       "id": 3
+    },
+    {
+      "flowName": "法国恢复供货方",
+      "links": [],
+      "steps": [
+        {
+          "id": "source_1",
+          "name": "source",
+          "type": "source",
+          "x": 448,
+          "y": 48,
+          "stepSettings": {},
+          "outputConfigurations": {
+            "output": []
+          }
+        },
+        {
+          "id": "dummy_source_2",
+          "name": "dummy_source",
+          "type": "source_dummy",
+          "x": 911.8148148148148,
+          "y": 143.2962962962963,
+          "stepSettings": {
+            "dataType": "userClick",
+            "storage": "DUMMY"
+          },
+          "outputConfigurations": {
+            "output": []
+          }
+        }
+      ],
+      "date": "2020-01-28 14:27:47",
+      "matrix": "{\"x\":165.78125,\"y\":25,\"scale\":0.84375}",
+      "id": 4
     }
   ],
   "steplist": [

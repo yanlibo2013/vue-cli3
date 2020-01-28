@@ -246,7 +246,7 @@ export default {
     };
   },
   computed: {
-    ...Vuex.mapState(["realtime"])
+    // ...Vuex.mapState(["realtime"])
   },
   mounted() {
     // let left = [3, 2, 1];
@@ -271,11 +271,11 @@ export default {
   beforeDestroy() {},
   destroyed: function() {},
   methods: {
-    ...Vuex.mapActions([
-      "setInputCheckedData",
-      "initInputCheckedData",
-      "initOutInputData"
-    ]),
+    // ...Vuex.mapActions([
+    //   "setInputCheckedData",
+    //   "initInputCheckedData",
+    //   "initOutInputData"
+    // ]),
     setMissAndIllegality(inputLeftData, inputRightData) {
       this.Missing = this.setMissing(inputLeftData, inputRightData);
       this.illegality = this.setIllegality(inputLeftData, inputRightData);

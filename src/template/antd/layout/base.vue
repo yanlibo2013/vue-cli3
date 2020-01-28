@@ -20,7 +20,7 @@
                 <a-layout-sider>Sider</a-layout-sider>
             </a-layout>
             <a-layout-footer>Footer</a-layout-footer>
-        </a-layout> -->
+    </a-layout>-->
     <a-layout :style="{ height: height + 'px' }">
       <a-layout-sider>Sider</a-layout-sider>
       <a-layout>
@@ -33,12 +33,13 @@
 </template>
 
 <script>
+import { mapGetters, mapActions, mapState } from "vuex";
 export default {
   components: {},
   mounted() {},
   methods: {},
   computed: {
-    ...Vuex.mapState(["height"])
+    ...mapState({ height: "height" })
   }
 };
 </script>
