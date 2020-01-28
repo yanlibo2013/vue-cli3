@@ -521,6 +521,7 @@ export default {
   width: 100%;
   height: 100%;
   background: #fff;
+
   .el-aside {
     background-color: #d3dce6;
     color: #333;
@@ -547,9 +548,11 @@ export default {
 
   .el-row {
     margin-bottom: 20px;
+
     &:last-child {
       margin-bottom: 0;
     }
+
     height: 100%;
   }
 
