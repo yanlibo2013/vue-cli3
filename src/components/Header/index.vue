@@ -1,6 +1,6 @@
 <template>
   <header class="v-header">
-    <h1>jsplumb chart</h1>
+    <h1>jsplumb chart 2021</h1>
     <div class="right-menu">
       <search id="header-search" class="right-menu-item" />
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">

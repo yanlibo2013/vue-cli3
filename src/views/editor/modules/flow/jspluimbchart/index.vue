@@ -20,6 +20,7 @@
           </el-col>
         </el-row>
       </el-header>
+
       <el-container>
         <el-main class="jsplumbchart-main">
           <drop class="drop-workplace" @drop="handleDrop" id="workplace">
@@ -517,11 +518,9 @@ export default {
   width: 100%;
   height: 100%;
   background: #fff;
-
   .el-aside {
     background-color: #d3dce6;
     color: #333;
-    // text-align: center;
     line-height: 200px;
   }
 
@@ -545,11 +544,9 @@ export default {
 
   .el-row {
     margin-bottom: 20px;
-
     &:last-child {
       margin-bottom: 0;
     }
-
     height: 100%;
   }
 
@@ -567,9 +564,8 @@ export default {
   }
 
   .bg-purple-light {
-    // background: #e5e9f2;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .grid-content {
