@@ -30,7 +30,6 @@ import {
 export default {
     watch: {
         data(val) {
-            console.log(" data(val) {", val);
             this.stepData = this.data.steps;
             this.links = this.data.links;
             this.nodeType = this.data.nodeType;

@@ -132,6 +132,7 @@ export default {
         this.input1 = flowData.flowName;
         this.matrix = flowData.matrix;
         this.jsplumbchartOption = {
+          isPanZoom: true,
           steps: this.steps,
           links: this.links,
           container: "workplace",
