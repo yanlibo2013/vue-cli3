@@ -2,6 +2,11 @@ const path = require("path");
 // console.log(" process.env.npm_config_host", process.env.npm_config_host);
 const HOST = process.env.npm_config_host;
 const PORT = process.env.npm_config_port && Number(process.env.npm_config_port);
+
+function resolve(dir) {
+  // 路径可能与你的项目不同
+  return path.join(__dirname, dir)
+}
 module.exports = {
   // Other options...
 
@@ -54,5 +59,30 @@ module.exports = {
       }
     }
   },
-  runtimeCompiler: true
+  runtimeCompiler: true,
+
+
+
+  chainWebpack: config => {
+    //config.module.rules.delete("svg"); //重点:删除默认配置中处理svg,
+    //const svgRule = config.module.rule('svg')
+    //svgRule.uses.clear()
+
+    // 使用 alias 简化路径
+    config.resolve.alias
+      .set('@', resolve('src'))
+      .set('@lib', resolve('src/lib'))
+      .set('@components', resolve('src/components'))
+      .set('@img', resolve('src/images'))
+      .set('@api', resolve('src/api'))
+    // 图片下的 url-loader 值，将其 limit 限制改为 5M
+    // config.module
+    //   .rule('images')
+    //   .use('url-loader')
+    //   .tap(options =>
+    //     merge(options, {
+    //       limit: 5120
+    //     })
+    //   )
+  }
 };
